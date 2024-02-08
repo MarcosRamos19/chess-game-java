@@ -16,6 +16,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         ChessMatch chessMatch = new ChessMatch();
+
         List<ChessPiece> captured = new ArrayList<>();
 
         while (!chessMatch.getCheckMate()) {
@@ -39,6 +40,7 @@ public class Program {
                 if (capturedPiece != null){
                     captured.add(capturedPiece);
                 }
+
                 if(chessMatch.getPromoted() != null){
                     System.out.print("Enter a piece for promotion (B/Q/N/R): ");
                     String type = sc.nextLine().toUpperCase();
